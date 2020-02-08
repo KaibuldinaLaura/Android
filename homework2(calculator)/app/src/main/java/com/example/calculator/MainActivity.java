@@ -147,10 +147,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (crunchifyTextView == null) {
-                    crunchifyTextView.setText("");
-                } else {
+                if (!crunchifyTextView.getText().equals("")) {
                     mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                     crunchifyAddition = true;
                     crunchifyTextView.setText(null);
@@ -161,79 +158,91 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
-                mSubtract = true;
-                crunchifyTextView.setText(null);
+                if (!crunchifyTextView.getText().equals("")){
+                    mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
+                    mSubtract = true;
+                    crunchifyTextView.setText(null);
+                }
             }
         });
 
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
-                crunchifyMultiplication = true;
-                crunchifyTextView.setText(null);
+                if (!crunchifyTextView.getText().equals("")){
+                    mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
+                    crunchifyMultiplication = true;
+                    crunchifyTextView.setText(null);
+                }
             }
         });
 
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
-                crunchifyDivision = true;
-                crunchifyTextView.setText(null);
+                if (!crunchifyTextView.getText().equals("")){
+                    mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
+                    crunchifyDivision = true;
+                    crunchifyTextView.setText(null);
+                }
             }
         });
 
         buttonRoot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
-                crunchifyTakeRoot = true;
+                if (!crunchifyTextView.getText().equals("")){
+                    mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
+                    crunchifyTakeRoot = true;
+                }
             }
         });
 
         buttonSquare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
-                crunchifyExponentiation = true;
+                if (!crunchifyTextView.getText().equals("")){
+                    mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
+                    crunchifyExponentiation = true;
+                }
             }
         });
 
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueTwo = Float.parseFloat(crunchifyTextView.getText() + "");
+                if (!crunchifyTextView.getText().equals("")){
+                    mValueTwo = Float.parseFloat(crunchifyTextView.getText() + "");
 
-                if (crunchifyAddition == true) {
-                    crunchifyTextView.setText(mValueOne + mValueTwo + "");
-                    crunchifyAddition = false;
-                }
+                    if (crunchifyAddition == true) {
+                        crunchifyTextView.setText(mValueOne + mValueTwo + "");
+                        crunchifyAddition = false;
+                    }
 
-                if (mSubtract == true) {
-                    crunchifyTextView.setText(mValueOne - mValueTwo + "");
-                    mSubtract = false;
-                }
+                    if (mSubtract == true) {
+                        crunchifyTextView.setText(mValueOne - mValueTwo + "");
+                        mSubtract = false;
+                    }
 
-                if (crunchifyMultiplication == true) {
-                    crunchifyTextView.setText(mValueOne * mValueTwo + "");
-                    crunchifyMultiplication = false;
-                }
+                    if (crunchifyMultiplication == true) {
+                        crunchifyTextView.setText(mValueOne * mValueTwo + "");
+                        crunchifyMultiplication = false;
+                    }
 
-                if (crunchifyDivision == true) {
-                    crunchifyTextView.setText(mValueOne / mValueTwo + "");
-                    crunchifyDivision = false;
-                }
+                    if (crunchifyDivision == true) {
+                        crunchifyTextView.setText(mValueOne / mValueTwo + "");
+                        crunchifyDivision = false;
+                    }
 
-                if (crunchifyTakeRoot == true) {
-                    crunchifyTextView.setText(Math.sqrt(mValueOne) + "");
-                    crunchifyTakeRoot = false;
-                }
+                    if (crunchifyTakeRoot == true) {
+                        crunchifyTextView.setText(Math.sqrt(mValueOne) + "");
+                        crunchifyTakeRoot = false;
+                    }
 
-                if (crunchifyExponentiation == true) {
-                    crunchifyTextView.setText(mValueOne * mValueOne + "");
-                    crunchifyExponentiation = false;
+                    if (crunchifyExponentiation == true) {
+                        crunchifyTextView.setText(mValueOne * mValueOne + "");
+                        crunchifyExponentiation = false;
+                    }
                 }
             }
         });
@@ -241,16 +250,20 @@ public class MainActivity extends AppCompatActivity {
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String s = crunchifyTextView.getText().toString();
-                s = s.substring(0, s.length()-1);
-                crunchifyTextView.setText(s);
+                if(!crunchifyTextView.getText().equals("")){
+                    String s = crunchifyTextView.getText().toString();
+                    s = s.substring(0, s.length()-1);
+                    crunchifyTextView.setText(s);
+                }
             }
         });
 
         buttonAC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crunchifyTextView.setText("");
+                if (!crunchifyTextView.getText().equals("")){
+                    crunchifyTextView.setText("");
+                }
             }
         });
 
