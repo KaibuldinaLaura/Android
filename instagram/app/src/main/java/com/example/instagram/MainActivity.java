@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -18,13 +19,14 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private NewsListAdapter adapter;
     private NewsListAdapter.ItemClickListener listener = null;
-    private ImageView iv2;
+    private ImageButton ib2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        iv2 = (ImageView) findViewById(R.id.imageView2);
+        ib2 = (ImageButton) findViewById(R.id.imageView2);
 
         listener = new NewsListAdapter.ItemClickListener() {
             @Override
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new NewsListAdapter(newsGenerator(), listener);
         recyclerView.setAdapter(adapter);
 
-        /*iv2.setOnClickListener(new View.OnClickListener() {
+        /*ib2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
