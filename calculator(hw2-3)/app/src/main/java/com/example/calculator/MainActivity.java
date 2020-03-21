@@ -111,7 +111,8 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(crunchifyTextView.getText().equals("0") || isError || crunchifyTextView.getText().equals("error")){
+                String s = crunchifyTextView.getText().toString();
+                if(s.equals("0") || isError || s.equals("error") || s.equals("∞")){
                     crunchifyTextView.setText("1");
                     isError=false;
                 }
@@ -122,7 +123,8 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(crunchifyTextView.getText().equals("0") || isError || crunchifyTextView.getText().equals("error")){
+                String s = crunchifyTextView.getText().toString();
+                if(s.equals("0") || isError || s.equals("error") || s.equals("∞")){
                     crunchifyTextView.setText("2");
                     isError=false;
                 }
@@ -133,7 +135,8 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(crunchifyTextView.getText().equals("0") || isError || crunchifyTextView.getText().equals("error")){
+                String s = crunchifyTextView.getText().toString();
+                if(s.equals("0") || isError || s.equals("error") || s.equals("∞")){
                     crunchifyTextView.setText("3");
                     isError=false;
                 }
@@ -144,7 +147,8 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(crunchifyTextView.getText().equals("0") || isError || crunchifyTextView.getText().equals("error")){
+                String s = crunchifyTextView.getText().toString();
+                if(s.equals("0") || isError || s.equals("error") || s.equals("∞")){
                     crunchifyTextView.setText("4");
                     isError=false;
                 }
@@ -155,7 +159,8 @@ public class MainActivity extends AppCompatActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(crunchifyTextView.getText().equals("0") || isError || crunchifyTextView.getText().equals("error")){
+                String s = crunchifyTextView.getText().toString();
+                if(s.equals("0") || isError || s.equals("error") || s.equals("∞")){
                     crunchifyTextView.setText("5");
                     isError=false;
                 }
@@ -166,7 +171,8 @@ public class MainActivity extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(crunchifyTextView.getText().equals("0") || isError || crunchifyTextView.getText().equals("error")){
+                String s = crunchifyTextView.getText().toString();
+                if(s.equals("0") || isError || s.equals("error") || s.equals("∞")){
                     crunchifyTextView.setText("6");
                     isError=false;
                 }
@@ -177,7 +183,8 @@ public class MainActivity extends AppCompatActivity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(crunchifyTextView.getText().equals("0") || isError || crunchifyTextView.getText().equals("error")){
+                String s = crunchifyTextView.getText().toString();
+                if(s.equals("0") || isError || s.equals("error") || s.equals("∞")){
                     crunchifyTextView.setText("7");
                     isError=false;
                 }
@@ -188,7 +195,8 @@ public class MainActivity extends AppCompatActivity {
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(crunchifyTextView.getText().equals("0") || isError || crunchifyTextView.getText().equals("error")){
+                String s = crunchifyTextView.getText().toString();
+                if(s.equals("0") || isError || s.equals("error") || s.equals("∞")){
                     crunchifyTextView.setText("8");
                     isError=false;
                 }
@@ -199,7 +207,8 @@ public class MainActivity extends AppCompatActivity {
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(crunchifyTextView.getText().equals("0") || isError || crunchifyTextView.getText().equals("error")){
+                String s = crunchifyTextView.getText().toString();
+                if(s.equals("0") || isError || s.equals("error") || s.equals("∞")){
                     crunchifyTextView.setText("9");
                     isError=false;
                 }
@@ -210,7 +219,8 @@ public class MainActivity extends AppCompatActivity {
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!crunchifyTextView.getText().equals("0") || isError || crunchifyTextView.getText().equals("error")){
+                String s = crunchifyTextView.getText().toString();
+                if(s.equals("0") || isError || s.equals("error") || s.equals("∞")){
                     crunchifyTextView.setText(crunchifyTextView.getText() + "0");
                     isError=false;
                 }
@@ -220,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!crunchifyTextView.getText().equals("") && crunchifyAddition == false) {
+                if (!crunchifyTextView.getText().equals("") && crunchifyAddition == false && !crunchifyTextView.getText().equals("∞")) {
                     operation += "+";
                     mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                     crunchifyAddition = true;
@@ -233,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!crunchifyTextView.getText().equals("") && mSubtract == false){
+                if (!crunchifyTextView.getText().equals("") && mSubtract == false && !crunchifyTextView.getText().equals("∞")){
                     operation += "-";
                     mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                     mSubtract = true;
@@ -246,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!crunchifyTextView.getText().equals("") && crunchifyMultiplication == false){
+                if (!crunchifyTextView.getText().equals("") && crunchifyMultiplication == false && !crunchifyTextView.getText().equals("∞")){
                     operation += "*";
                     mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                     crunchifyMultiplication = true;
@@ -259,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!crunchifyTextView.getText().equals("") && crunchifyDivision == false){
+                if (!crunchifyTextView.getText().equals("") && crunchifyDivision == false && !crunchifyTextView.getText().equals("∞")){
                     operation += "/";
                     mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                     crunchifyDivision = true;
@@ -272,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
         buttonRoot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!crunchifyTextView.getText().equals("") && crunchifyTakeRoot == false){
+                if (!crunchifyTextView.getText().equals("") && crunchifyTakeRoot == false && !crunchifyTextView.getText().equals("∞")){
                     operation += "v";
                     mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                     crunchifyTakeRoot = true;
@@ -284,7 +294,7 @@ public class MainActivity extends AppCompatActivity {
         buttonSquare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!crunchifyTextView.getText().equals("") && crunchifySin == false){
+                if (!crunchifyTextView.getText().equals("") && crunchifySin == false && !crunchifyTextView.getText().equals("∞")){
                     operation += "s";
                     mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                     crunchifyExponentiation = true;
@@ -298,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
             buttonsin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (!crunchifyTextView.getText().equals("") && crunchifySin == false){
+                    if (!crunchifyTextView.getText().equals("") && crunchifySin == false && !crunchifyTextView.getText().equals("∞")){
                         operation += "i";
                         mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                         crunchifySin = true;
@@ -310,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
             buttoncos.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (!crunchifyTextView.getText().equals("") && crunchifyCos == false){
+                    if (!crunchifyTextView.getText().equals("") && crunchifyCos == false && !crunchifyTextView.getText().equals("∞")){
                         operation += "c";
                         mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                         crunchifyCos = true;
@@ -322,7 +332,7 @@ public class MainActivity extends AppCompatActivity {
             buttontan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (!crunchifyTextView.getText().equals("") && crunchifyTan == false){
+                    if (!crunchifyTextView.getText().equals("") && crunchifyTan == false && !crunchifyTextView.getText().equals("∞")){
                         operation += "t";
                         mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                         crunchifyTan = true;
@@ -334,7 +344,7 @@ public class MainActivity extends AppCompatActivity {
             buttonln.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (!crunchifyTextView.getText().equals("") && crunchifyLn == false){
+                    if (!crunchifyTextView.getText().equals("") && crunchifyLn == false && !crunchifyTextView.getText().equals("∞")){
                         operation += "d";
                         mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                         crunchifyLn = true;
@@ -346,7 +356,7 @@ public class MainActivity extends AppCompatActivity {
             buttonlog.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (!crunchifyTextView.getText().equals("") && crunchifyLog == false){
+                    if (!crunchifyTextView.getText().equals("") && crunchifyLog == false && !crunchifyTextView.getText().equals("∞")){
                         operation += "l";
                         mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                         crunchifyLog = true;
@@ -358,7 +368,7 @@ public class MainActivity extends AppCompatActivity {
             buttonPercent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (!crunchifyTextView.getText().equals("") && crunchifyPercent == false){
+                    if (!crunchifyTextView.getText().equals("") && crunchifyPercent == false && !crunchifyTextView.getText().equals("∞")){
                         operation += "%";
                         mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                         crunchifyPercent = true;
@@ -371,7 +381,7 @@ public class MainActivity extends AppCompatActivity {
             buttonnthRoot.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (!crunchifyTextView.getText().equals("") && crunchifyNthRoot == false){
+                    if (!crunchifyTextView.getText().equals("") && crunchifyNthRoot == false && !crunchifyTextView.getText().equals("∞")){
                         operation += "n";
                         mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                         crunchifyNthRoot = true;
@@ -384,7 +394,7 @@ public class MainActivity extends AppCompatActivity {
             buttonnthSquare.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (!crunchifyTextView.getText().equals("") && crunchifyNthSquare == false){
+                    if (!crunchifyTextView.getText().equals("") && crunchifyNthSquare == false && !crunchifyTextView.getText().equals("∞")){
                         operation += "a";
                         mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                         crunchifyNthSquare = true;
@@ -397,7 +407,7 @@ public class MainActivity extends AppCompatActivity {
             buttonFact.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (!crunchifyTextView.getText().equals("") && crunchifyFactorial == false){
+                    if (!crunchifyTextView.getText().equals("") && crunchifyFactorial == false && !crunchifyTextView.getText().equals("∞")){
                         operation += "!";
                         mValueOne = Float.parseFloat(crunchifyTextView.getText() + "");
                         crunchifyFactorial = true;

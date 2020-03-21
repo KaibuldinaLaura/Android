@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private NewsListAdapter.ItemClickListener listener = null;
     private ImageButton ib2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
