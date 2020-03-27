@@ -19,13 +19,13 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private NewsListAdapter adapter;
     private NewsListAdapter.ItemClickListener listener = null;
-    private ImageButton ib2;
+    //private ImageButton ib2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ib2 = (ImageButton) findViewById(R.id.imageView2);
+        //ib2 = (ImageButton) findViewById(R.id.imageView2);
 
         listener = new NewsListAdapter.ItemClickListener() {
             @Override
@@ -125,6 +125,16 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.iv10,
                 k + "  Of course coffee",
                 s + 150, "Посмотреть все комментарии (15)");
+        items.add(news1);
+        items.add(news2);
+        items.add(news3);
+        items.add(news4);
+        items.add(news5);
+        items.add(news6);
+        items.add(news7);
+        items.add(news8);
+        items.add(news9);
+        items.add(news10);
         items.add(news1);
         items.add(news2);
         items.add(news3);
