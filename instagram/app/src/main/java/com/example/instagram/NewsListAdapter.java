@@ -17,17 +17,17 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
 
     private List<News> newsList;
 
-    @Nullable
-    private ItemClickListener listener;
-    private ImageView iv2;
+        @Nullable
+        private ItemClickListener listener;
+        private ImageView iv2;
 
     public NewsListAdapter(List<News> newsList) {
-        this.newsList = newsList;
-    }
+            this.newsList = newsList;
+}
 
     public NewsListAdapter(List<News> newsList, @Nullable ItemClickListener listener) {
-        this.newsList = newsList;
-        this.listener = listener;
+            this.newsList = newsList;
+            this.listener = listener;
     }
 
     @NonNull

@@ -19,7 +19,7 @@ public class NewsDetailActivity extends AppCompatActivity {
         tvNewsDetail = findViewById(R.id.tvNewsDetail);
         tvImageDetail = findViewById(R.id.imageView6);
 
-        News news = (News) getIntent().getParcelableExtra("news");
+        News news = getIntent().getParcelableExtra("news");
         tvNewsDetail.setText(news.getTheme());
         tvImageDetail.setImageResource(news.getImageUrl());
     }

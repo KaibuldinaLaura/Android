@@ -1,11 +1,7 @@
 package com.example.instagram;
 
-import android.media.Image;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.widget.ImageView;
-
-import java.io.Serializable;
 
 public class News implements Parcelable {
     private int imageUrl;
@@ -38,56 +34,28 @@ public class News implements Parcelable {
         return date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
-
     public String getAuthor() {
         return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     public int getImageUrl2() {
         return imageUrl2;
     }
 
-    public void setImageUrl2(int imageUrl2) {
-        this.imageUrl2 = imageUrl2;
-    }
-
     public String getTheme() {
         return theme;
-    }
-
-    public void setTheme(String theme) {
-        this.theme = theme;
     }
 
     public String getRatingCount() {
         return ratingCount;
     }
 
-    public void setRatingCount(String ratingCount) {
-        this.ratingCount = ratingCount;
-    }
-
     public String getCommentsCount() {
         return commentsCount;
     }
 
-    public void setCommentsCount(String commentsCount) {
-        this.commentsCount = commentsCount;
-    }
-
     public int getImageUrl() {
         return imageUrl;
-    }
-
-    public void setImageUrl(int imageUrl) {
-        this.imageUrl = imageUrl;
     }
 
     @Override
